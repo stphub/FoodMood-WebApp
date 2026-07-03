@@ -12,8 +12,13 @@
 
 ## Images Example
 
-<p align="center">
+## 📸 Project Screenshots
+
+### Login Page
 ![Login Page](images/page-login.png)
+
+### Random Page
 ![Random Page](images/page-random.png)
-![Menu Page](images/page-Examplemenu.png)
-</p>
+
+### Menu Page
+![Menu Page](images/page-examplemenu.png)
