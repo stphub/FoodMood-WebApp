@@ -19,6 +19,6 @@
 ![Random Page](images/page-random.png)
 
 ### Menu Page
-![Menu Page](images/page-examplemenu.png)
+![Menu Page](images/page-Examplemenu.png)
 
 
