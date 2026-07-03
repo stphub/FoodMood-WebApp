@@ -1,4 +1,4 @@
-# GOODMOOD Web Application
+# FOODMOOD Web Application
 
 ## Overview
 เว็ปสุ่มอาหารตามอารมณ์ของผู้ใช้เพื่อแก้ปัญหาที่คิดไม่ออกว่าวันจะกินอะไรดี
