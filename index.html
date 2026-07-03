@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FOODMOOD - ร้านอาหารตามอารมณ์</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Login Form -->
+  <div id="login-container">
+    <h2>เข้าสู่ระบบ</h2>
+    <input type="text" id="username" placeholder="ชื่อผู้ใช้"><br><br>
+    <input type="password" id="password" placeholder="รหัสผ่าน"><br><br>
+    <button onclick="login()">เข้าสู่ระบบ</button>
+    <p id="login-error" style="color:red;"></p>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="javascript:void(0);" onclick="showHome()">Home</a></li>
+      <li><a href="javascript:void(0);" onclick="showMenu()">Menu</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home content -->
+  <div id="home-content">
+    <header>
+      <h1>🍴 FOODMOOD</h1>
+      <p>เลือกอารมณ์แล้วลองทานเมนูที่เหมาะกับวันนี้!</p>
+    </header>
+
+    <div class="emoji-container">
+      <div class="emoji-item">
+        <button onclick="suggestFood('happy')">😊</button>
+        <p>มีความสุข</p>
+      </div>
+      <div class="emoji-item">
+        <button onclick="suggestFood('sad')">😢</button>
+        <p>เศร้า</p>
+      </div>
+      <div class="emoji-item">
+        <button onclick="suggestFood('angry')">😡</button>
+        <p>โกรธ</p>
+      </div>
+      <div class="emoji-item">
+        <button onclick="suggestFood('sleepy')">😴</button>
+        <p>ง่วงนอน</p>
+      </div>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <!-- Menu content -->
+  <div id="menu-content" style="display: none;">
+    <header>
+      <h1>เมนูทั้งหมด</h1>
+      <p>ดูเมนูตามอารมณ์ของคุณ!</p>
+    </header>
+    <div id="full-menu-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

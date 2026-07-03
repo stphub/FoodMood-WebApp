@@ -1,0 +1,322 @@
+/* กำหนดให้ทุกกล่องคำนวณ padding และ border รวมในความกว้าง */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: none; /* ลบ background หลักออก */
+}
+
+/* ซ่อนเนื้อหาหลักจนกว่าจะ Login */
+nav, #home-content, #menu-content {
+  display: none;
+}
+
+/* ---------- พื้นหลังแต่ละหน้า ---------- */
+#login-container {
+  background-image: url('https://shorturl.asia/IcT2o'); /* พื้นหลังหน้า Login */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+
+#home-content, #menu-content {
+  background-image: url('https://shorturl.asia/K0i7P'); /* พื้นหลังหน้า Home/Menu */
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* รูปแบบของปุ่มและกล่องข้อความในหน้า Login */
+#login-container input {
+  padding: 10px;
+  width: 200px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#login-container button {
+  padding: 10px 20px;
+  background-color: #f1c40f;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#login-container button:hover {
+  background-color: #f39c12;
+}
+
+#login-container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#login-error {
+  margin-top: 10px;
+}
+
+/* จัด body ให้ใช้ flex และจัดเรียงแนวตั้ง */
+body {
+  display: flex;
+  flex-direction: column; /* แนวตั้ง */
+  padding: 0;
+  margin: 0;
+  height: 100vh; /* สูงเต็มหน้าจอแนวตั้ง */
+}
+
+/* สไตล์แถบเมนู (Navigation bar) */
+nav {
+  background-color: rgba(6, 14, 13, 0.8); /* สีดำโปร่งใส */
+  padding: 15px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100; /* ซ้อนอยู่ด้านบน */
+}
+
+nav ul {
+  list-style: none; /* ไม่มีสัญลักษณ์หน้ารายการ */
+  display: flex; /* จัดเรียงเป็นแถว */
+  justify-content: right; /* ชิดขวา */
+  gap: 20px; /* ช่องว่างระหว่างเมนู */
+  margin: 0;
+}
+
+nav li {
+  display: inline; /* แสดง inline */
+}
+
+nav a {
+  text-decoration: none; /* ไม่มีขีดใต้ลิงก์ */
+  color: #fff; /* สีตัวอักษรขาว */
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase; /* ตัวพิมพ์ใหญ่ */
+  transition: color 0.3s ease; /* เปลี่ยนสีลื่นไหล */
+}
+
+nav a:hover {
+  color: #f1c40f; /* เปลี่ยนเป็นสีทองเมื่อ hover */
+}
+
+/* กล่องหลักของเนื้อหา */
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 50px 20px;
+  animation: fadeIn 1s ease-in-out; /* เพิ่มแอนิเมชัน */
+}
+
+/* ส่วนหัว (Header) */
+header {
+  text-align: left;
+  background: linear-gradient(135deg, #2f3542, #57606f); /* สีเทาไล่เฉด */
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(30, 30, 30, 0.85); /* เงาเข้ม */
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 0;
+  text-transform: uppercase; 
+}
+
+header p {
+  font-size: 22px;
+  margin-top: 5px;
+  font-weight: 300; 
+}
+
+/* กล่องของ emoji แต่ละอัน */
+.emoji-container {
+  display: flex;
+  justify-content: center; 
+  gap: 60px; 
+  margin-top: 30px;
+}
+
+.emoji-item button {
+  font-size: 80px; /* ขนาด emoji */
+  background-color: #ffffff;
+  border: 3px solid #f1c40f; /* สีขอบทอง */
+  border-radius: 50%; /* วงกลม */
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(14, 240, 44, 0.1); /* เงาเบา */
+}
+
+.emoji-item button:hover {
+  transform: scale(1.2); 
+  background-color: #ffe0d3; 
+  border-color: #f39c12; 
+}
+
+.emoji-item p {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #f7f1f1;
+}
+
+/* กล่องแสดงผลเมนูจากอารมณ์ */
+#result {
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f5f3f2;
+  text-align: center;
+  background-color: rgba(36, 13, 13, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ส่วนหัวของเมนู */
+#menu {
+  margin-top: 50px;
+  text-align: right;
+}
+
+#menu h2 {
+  font-size: 32px;
+  color: #dcdde1; /* สีเทาอ่อน */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* ระยะห่างระหว่างตัวอักษร */
+}
+
+/* กล่องรวมรายการเมนู */
+.menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่ได้ */
+}
+
+/* การ์ดของอาหารแต่ละเมนู */
+.menu-item {
+  width: 250px;
+  text-align: center;
+  background-color: #32402f;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(26, 212, 1, 0.2); /* เงาเข้ม */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.05); /* ขยายเมื่อ hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ecf0f1;
+}
+
+/* รูปภาพอาหาร */
+.food-image {
+  width: 100%;
+  max-width: 250px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(5, 9, 245, 0.15);
+}
+
+/* ส่วนเมนูแบบเต็มหน้าสำหรับดูทั้งหมด */
+#menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #130c0c;
+  padding: 60px 30px;
+}
+
+#menu-content h1 {
+  font-size: 36px;
+  color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+#menu-content p {
+  font-size: 18px;
+  color: #f9f9f9;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* กล่องเมนูทั้งหมด */
+#full-menu-list {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#full-menu-list div {
+  background-color: #474647;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#full-menu-list div:hover {
+  transform: scale(1.02);
+}
+
+#full-menu-list h3 {
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* รูปใน full menu */
+.food-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#full-menu-list p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* เส้นคั่น */
+hr {
+  border: 1px solid #f0f0f0;
+  margin-top: 20px;
+}
+
+/* แอนิเมชันเฟดอิน */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
