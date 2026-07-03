@@ -1,4 +1,4 @@
-# GOODMOOD Web Application
+# FOODMOOD Web Application
 
 ## Overview
 เว็ปสุ่มอาหารตามอารมณ์ของผู้ใช้เพื่อแก้ปัญหาที่คิดไม่ออกว่าวันจะกินอะไรดี
@@ -12,8 +12,6 @@
 
 ## Images Example
 
-## 📸 Project Screenshots
-
 ### Login Page
 ![Login Page](images/page-login.png)
 
@@ -22,3 +20,5 @@
 
 ### Menu Page
 ![Menu Page](images/page-examplemenu.png)
+
+
